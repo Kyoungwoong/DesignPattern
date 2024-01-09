@@ -4,22 +4,28 @@ public class main {
         Duck redheadDuck = new RedheadDuck();
         Duck rubberDuck = new RubberDuck();
 
+        System.out.println("============================================================");
         // MallardDuck
+        mallardDuck.display();
         mallardDuck.performQuack();
         mallardDuck.swim();
         mallardDuck.performFly();
-        mallardDuck.display();
+        System.out.println("============================================================\n");
 
         // ReadHeadDuck
+        redheadDuck.display();
         redheadDuck.performQuack();
         redheadDuck.swim();
         redheadDuck.performFly();
-        redheadDuck.display();
+        redheadDuck.setFlyBehavior(new FlyRocketPowered());
+        redheadDuck.performFly();
+        System.out.println("============================================================\n");
 
         // RubberDuck
+        rubberDuck.display();
         rubberDuck.performQuack();
         rubberDuck.swim();
-        rubberDuck.display();
         rubberDuck.performFly();
+        System.out.println("============================================================\n");
     }
 }

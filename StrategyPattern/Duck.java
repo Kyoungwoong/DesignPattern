@@ -8,8 +8,16 @@ public abstract class Duck {
         quackBehavior.quack();
     }
 
+    void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
+
     void performFly() {
         flyBehavior.fly();
+    }
+
+    void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
     }
 
     void swim() {
