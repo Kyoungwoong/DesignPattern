@@ -1,25 +1,25 @@
 public class main {
     public static void main(String[] args) {
-        MallardDuck mallardDuck = new MallardDuck();
-        RedheadDuck redheadDuck = new RedheadDuck();
-        RubberDuck rubberDuck = new RubberDuck();
+        Duck mallardDuck = new MallardDuck();
+        Duck redheadDuck = new RedheadDuck();
+        Duck rubberDuck = new RubberDuck();
 
         // MallardDuck
-        mallardDuck.quack();
+        mallardDuck.performQuack();
         mallardDuck.swim();
-        mallardDuck.fly();
+        mallardDuck.performFly();
         mallardDuck.display();
 
         // ReadHeadDuck
-        redheadDuck.quack();
+        redheadDuck.performQuack();
         redheadDuck.swim();
-        redheadDuck.fly();
+        redheadDuck.performFly();
         redheadDuck.display();
 
         // RubberDuck
-        rubberDuck.quack();
+        rubberDuck.performQuack();
         rubberDuck.swim();
         rubberDuck.display();
-
+        rubberDuck.performFly();
     }
 }
