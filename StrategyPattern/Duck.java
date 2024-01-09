@@ -6,5 +6,10 @@ public abstract class Duck {
         System.out.println("헤엄!");
 
     }
+
+    void fly() {
+        System.out.println("훨훨~");
+    }
+
     abstract void display();
 }
