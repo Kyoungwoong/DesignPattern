@@ -1,15 +1,10 @@
 public abstract class Duck {
-    void quack() {
-        System.out.println("꽥!");
-    }
+    // 모든 오리의 동작을 여기서 정의
     void swim() {
         System.out.println("헤엄!");
 
     }
 
-    void fly() {
-        System.out.println("훨훨~");
-    }
-
+    // 오리에 따른 description
     abstract void display();
 }

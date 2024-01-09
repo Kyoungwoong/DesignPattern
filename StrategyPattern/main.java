@@ -1,8 +1,8 @@
 public class main {
     public static void main(String[] args) {
-        Duck mallardDuck = new MallardDuck();
-        Duck redheadDuck = new RedheadDuck();
-        Duck rubberDuck = new RubberDuck();
+        MallardDuck mallardDuck = new MallardDuck();
+        RedheadDuck redheadDuck = new RedheadDuck();
+        RubberDuck rubberDuck = new RubberDuck();
 
         // MallardDuck
         mallardDuck.quack();
@@ -19,7 +19,6 @@ public class main {
         // RubberDuck
         rubberDuck.quack();
         rubberDuck.swim();
-        rubberDuck.fly();
         rubberDuck.display();
 
     }
