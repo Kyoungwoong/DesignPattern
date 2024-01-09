@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class WeatherData implements Subject{
+public class WeatherData implements Subject {
 
     // 인스턴스 변수 선언
     private List<Observer> observers;
@@ -22,10 +22,18 @@ public class WeatherData implements Subject{
     }
 
     public void notifyObservers() {
-        // Observer들에게 갱신 값 보내주기.
+        // Push방식
+//        // Observer들에게 갱신 값 보내주기.
+//        for (Observer o : observers) {
+//            o.update(temperature, humidity, pressure);
+//        }
+
+        // Pull
+        // Observer에서 값 가져오기
         for (Observer o : observers) {
-            o.update(temperature, humidity, pressure);
+            o.update();
         }
+
     }
 
     public void measurementsChanged() {
@@ -45,6 +53,18 @@ public class WeatherData implements Subject{
          * 최신 측정 값을 가져오는 시점을 판단하기 어려움
          * Observer 패턴 도입.
          */
+    }
+
+    public float getTemperature() {
+        return temperature;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+
+    public float getPressure() {
+        return pressure;
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {

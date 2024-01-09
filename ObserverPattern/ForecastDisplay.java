@@ -15,6 +15,13 @@ public class ForecastDisplay implements Observer, DisplayElement{
         display();
     }
 
+    public void update() {
+        this.humidity = weatherData.getHumidity();
+        this.pressure = weatherData.getPressure();
+
+        display();
+    }
+
     public void display() {
         System.out.println("Forecast Display");
         System.out.println("pressure = " + pressure + " humidity = " + humidity);

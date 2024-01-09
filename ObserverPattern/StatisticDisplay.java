@@ -15,6 +15,13 @@ public class StatisticDisplay implements Observer, DisplayElement {
         display();
     }
 
+    public void update() {
+        this.temperature = weatherData.getTemperature();
+        this.pressure = weatherData.getPressure();
+
+        display();
+    }
+
     public void display() {
         System.out.println("Statistic Display");
         System.out.println("temperature = " + temperature + " pressure = " + pressure);
