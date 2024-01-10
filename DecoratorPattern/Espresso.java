@@ -6,11 +6,7 @@ public class Espresso extends Beverage {
         description = "에스프레소 커피";
     }
 
-    void getDescription() {
-        System.out.println(description);
-    }
-
     double cost() {
-        return super.cost() + cost;
+        return cost;
     }
 }

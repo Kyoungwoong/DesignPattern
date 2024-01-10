@@ -6,11 +6,7 @@ public class HouseBlend extends Beverage {
         description = "하우스 블렌드 커피";
     }
 
-    void getDescription() {
-        System.out.println(description);
-    }
-
     double cost() {
-        return super.cost() + cost;
+        return cost;
     }
 }

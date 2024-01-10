@@ -6,11 +6,7 @@ public class Decaf extends Beverage {
         description = "디카페인 커피";
     }
 
-    void getDescription() {
-        System.out.println(description);
-    }
-
     double cost() {
-        return super.cost() + cost;
+        return cost;
     }
 }
