@@ -1,4 +1,4 @@
-public class DarkRoast extends StarBiz{
+public class DarkRoast extends Beverage {
     private double cost = 0.99;
 
     public DarkRoast() {
@@ -10,6 +10,6 @@ public class DarkRoast extends StarBiz{
     }
 
     double cost() {
-        return cost;
+        return super.cost() + cost;
     }
 }
