@@ -12,5 +12,12 @@ public class StarbuzzCoffee {
         Beverage sameB = new Whip(new Mocha(new Mocha(new DarkRoast())));
         System.out.println("Dark double Mocha whipping: " + sameB.getDescription() + " cost: " + sameB.cost() + "\t" + sameB.getClass());
 
+        // SIZE = GRANDE;
+        Beverage darkRoastGrande = new DarkRoast();
+        darkRoastGrande.setSize(Beverage.SIZE.GRANDE);
+        darkRoastGrande = new Mocha(darkRoastGrande);
+        darkRoastGrande = new Mocha(darkRoastGrande);
+        darkRoastGrande = new Whip(darkRoastGrande);
+        System.out.println("Dark Grande double Mocha whipping: " + darkRoastGrande.getDescription() + " cost: " + darkRoastGrande.cost());
     }
 }
