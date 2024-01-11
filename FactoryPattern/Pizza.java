@@ -1,24 +1,13 @@
-public class Pizza {
-
-    public Pizza() {
+public abstract class Pizza {
+    public void prepare() {
+        System.out.println("준비");
     }
 
-    Pizza orderPizza(String type) {
-        Pizza pizza;
+    public void bake() {
+        System.out.println("굽기");
+    }
 
-        if (type.equals("cheese")) {
-            pizza = new ChesePizza();
-        } else if (type.equals("greek")) {
-            pizza = new GreekPizza();
-        } else if (type.equals("pepperoni")) {
-            pizza = new PepperoniPizza();
-        }
-
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
-
-        return pizza;
+    public void box() {
+        System.out.println("포장");
     }
 }
