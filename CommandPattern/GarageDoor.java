@@ -1,7 +1,8 @@
-public class Garage {
+public class GarageDoor {
 
-    public Garage() {
-
+    String location = "";
+    public GarageDoor(String location) {
+        this.location = location;
     }
     public void up() {
         System.out.println("문 열리기");

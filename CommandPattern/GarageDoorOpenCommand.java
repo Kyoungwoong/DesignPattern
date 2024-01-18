@@ -1,12 +1,12 @@
 public class GarageDoorOpenCommand implements Command{
-    Garage garage;
+    GarageDoor garageDoor;
 
-    public GarageDoorOpenCommand(Garage garage) {
-        this.garage = garage;
+    public GarageDoorOpenCommand(GarageDoor garageDoor) {
+        this.garageDoor = garageDoor;
     }
 
     public void execute() {
-        garage.up();
+        garageDoor.up();
     }
 
 }
