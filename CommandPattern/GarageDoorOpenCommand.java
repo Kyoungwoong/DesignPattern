@@ -9,4 +9,8 @@ public class GarageDoorOpenCommand implements Command{
         garageDoor.up();
     }
 
+    public void undo() {
+        garageDoor.down();
+    }
+
 }
