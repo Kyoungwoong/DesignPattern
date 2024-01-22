@@ -4,18 +4,18 @@
 
 ---
 
-- 모든 오리가 할 수 있는 동작 `Duck` 클래스에서 정의
+- 모든 오리가 할 수 있는 동작 `SimpleAdapter.Duck` 클래스에서 정의
     - `quack()`
     - `swim()`
     - `display()`
         - 모든 오리의 동작이 다르므로 추상 메소드에서 정의
-- `MallardDuck` 클래스와 `RedHeadDuck` 클래스가 Duck 클래스를 상속받아서 display override
+- `SimpleAdapter.MallardDuck` 클래스와 `RedHeadDuck` 클래스가 SimpleAdapter.Duck 클래스를 상속받아서 display override
 - 이후에 모든 오리에게 날 수 있는 동작을 정의하고 싶음
-    - `Duck` 클래스에서 `fly()` 메소드 추가로 정의로 해결 가능
+    - `SimpleAdapter.Duck` 클래스에서 `fly()` 메소드 추가로 정의로 해결 가능
 
 ### 문제발생
 
-- fly() 메소드는 일부 Duck 클래스를 상속한 서브 클래스에만 되어야했는데 모든 서브 클래스에 적용이 다 되어버림
+- fly() 메소드는 일부 SimpleAdapter.Duck 클래스를 상속한 서브 클래스에만 되어야했는데 모든 서브 클래스에 적용이 다 되어버림
 
 ## 해결책
 
@@ -34,7 +34,7 @@
     - 코드를 변경하는 과정에서 의도치 않게 발생하는 일을 줄이면서 시스템의 유연성을 향상.
 - **구현보다는 인터페이스에 맞춰 프로그래밍한다.**
     - 각 행동은 인터페이스로 표현(`FlyBehavior`, `QuackBehavior`…)
-    - 메소드는 `Duck` 클래스에서 구현X. 인터페이스에서 먼저 정의
+    - 메소드는 `SimpleAdapter.Duck` 클래스에서 구현X. 인터페이스에서 먼저 정의
 
 💡 구현보다는 **인터페이스에 맞춰 프로그래밍**한다.
 
@@ -42,24 +42,24 @@
 
 ---
 
-**나는 행동과 꽥꽥거리는 행동을 `Duck` 클래스에서 정의한 메소드를 써서 구현하지 않고 다른 클래스로 위임하는 행동.**
+**나는 행동과 꽥꽥거리는 행동을 `SimpleAdapter.Duck` 클래스에서 정의한 메소드를 써서 구현하지 않고 다른 클래스로 위임하는 행동.**
 
-- `Duck` 클래스에 `FlyBehavior`와 `QuackBehavior`을 인스턴스 변수로 저장.
-    - `Duck` 클래스는 인터페이스에서 구현한 `fly()`와 `quack()` 메소드를 실행하기 위한 메소드 정의(`performFly()`, `performQuack()`)
+- `SimpleAdapter.Duck` 클래스에 `FlyBehavior`와 `QuackBehavior`을 인스턴스 변수로 저장.
+    - `SimpleAdapter.Duck` 클래스는 인터페이스에서 구현한 `fly()`와 `quack()` 메소드를 실행하기 위한 메소드 정의(`performFly()`, `performQuack()`)
 
 ### Example
 
 ```java
-public class MallardDuck extends Duck {
+public class SimpleAdapter.MallardDuck extends SimpleAdapter.Duck {
 
-    public MallardDuck() {
+    public SimpleAdapter.MallardDuck() {
         flyBehavior = new FlyWithWings();
         quackBehavior = new Quack();
     }
 
     @Override
     void display() {
-        System.out.println("MallardDuck!");
+        System.out.println("SimpleAdapter.MallardDuck!");
     }
 }
 ```
@@ -71,13 +71,13 @@ public class MallardDuck extends Duck {
 
 ### 동적으로 행동 지정하기
 
-- Duck 클래스에 Setter method 정의(`setQuackBehavior()`, `setFlyBehavior()`)
+- SimpleAdapter.Duck 클래스에 Setter method 정의(`setQuackBehavior()`, `setFlyBehavior()`)
 
 ### 두 클래스를 합치는 방법
 
 💡 상속보다는 **구성을 활용**
 
-- A에는 B가 있다. ⇒ `Duck` 클래스에 `FlyBehavior`와 `QuackBehavior`가 있어서 `Duck` 클래스에 나는 행동과 꽥꽥거리는 행동을 위임. ⇒ **구성**
+- A에는 B가 있다. ⇒ `SimpleAdapter.Duck` 클래스에 `FlyBehavior`와 `QuackBehavior`가 있어서 `SimpleAdapter.Duck` 클래스에 나는 행동과 꽥꽥거리는 행동을 위임. ⇒ **구성**
 
 # 전략패턴
 
