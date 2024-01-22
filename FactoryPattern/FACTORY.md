@@ -6,7 +6,7 @@
 - `new` 연산자가 **구상**을 생각!!
     - `new`를 사용하면 **구상 클래스의 인스턴스**가 만들어짐
     - 이는 구상 클래스를 바탕으로 코드를 수정해야 할 가능성이 커지고 유연성이 떨어짐.
-      `Duck duck = new MallardDuck()`
+      `SimpleAdapter.Duck duck = new SimpleAdapter.MallardDuck()`
 
 ### `new`의 문제?
 
