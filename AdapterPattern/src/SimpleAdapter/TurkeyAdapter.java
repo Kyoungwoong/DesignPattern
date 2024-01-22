@@ -1,3 +1,5 @@
+package SimpleAdapter;
+
 public class TurkeyAdapter implements Duck {
 	Turkey turkey;
  

@@ -1,3 +1,5 @@
+package SimpleAdapter;
+
 public class WildTurkey implements Turkey {
     @Override
     public void gobble() {

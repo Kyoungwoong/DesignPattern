@@ -1,3 +1,5 @@
+package SimpleAdapter;
+
 import java.util.Random;
 
 public class DuckAdapter implements Turkey {

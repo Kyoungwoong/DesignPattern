@@ -1,3 +1,5 @@
+package SimpleAdapter;
+
 public class MallardDuck implements Duck{
     @Override
     public void quack() {
