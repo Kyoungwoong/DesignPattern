@@ -1,3 +1,5 @@
+package basic;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -40,12 +42,12 @@ public class PancakeHouseMenu implements Menu {
 		return menuItems;
 	}
   
-//	public Iterator createIterator() {
-//		return new PancakeHouseMenuIterator(menuItems);
-//	}
+	public Iterator createIterator() {
+		return new PancakeHouseMenuIterator(menuItems);
+	}
   
 	public String toString() {
-		return "Objectville Pancake House Menu";
+		return "Objectville Pancake House basic.Menu";
 	}
 
 	// other menu methods here

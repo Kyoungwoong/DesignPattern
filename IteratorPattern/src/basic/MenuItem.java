@@ -1,3 +1,5 @@
+package basic;
+
 public class MenuItem {
     String name;
     String description;
