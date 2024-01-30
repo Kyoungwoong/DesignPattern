@@ -12,7 +12,7 @@ public class MenuTestDrive {
 		menus.add(dinerMenu);
 
 		Waitress waitress = new Waitress(menus);
-		
+
 		waitress.printMenu();
 
 	}
