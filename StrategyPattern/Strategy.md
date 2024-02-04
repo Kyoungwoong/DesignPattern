@@ -9,7 +9,7 @@
     - `swim()`
     - `display()`
         - 모든 오리의 동작이 다르므로 추상 메소드에서 정의
-- `SimpleAdapter.MallardDuck` 클래스와 `RedHeadDuck` 클래스가 SimpleAdapter.Duck 클래스를 상속받아서 display override
+- `SimpleAdapter.MallardDuck` 클래스와 `RedheadDuck` 클래스가 SimpleAdapter.Duck 클래스를 상속받아서 display override
 - 이후에 모든 오리에게 날 수 있는 동작을 정의하고 싶음
     - `SimpleAdapter.Duck` 클래스에서 `fly()` 메소드 추가로 정의로 해결 가능
 
